@@ -31,7 +31,7 @@ export default {
         { name: "Take Order For Customer", path: "/addPurchase" },
         { name: "Delete Order For Customer", path: "/deletePurchase" },
         { name: "Add Dealer", path: "/addDealer" },
-        { name: "Çıkış" },
+        { name: "Quit" },
       ],
     };
   },
