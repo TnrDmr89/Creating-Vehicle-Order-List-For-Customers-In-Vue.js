@@ -31,13 +31,13 @@ export default {
         { name: "Take Order For Customer", path: "/addPurchase" },
         { name: "Delete Order For Customer", path: "/deletePurchase" },
         { name: "Add Dealer", path: "/addDealer" },
-        { name: "Quit" },
+        { name: "Log Off"}
       ],
     };
   },
   methods: {
     next(process) {
-      if (process.name !== "Çıkış") {
+      if (process.name !== "Log Off") {
         this.$router.replace(process.path);
       } else {
         this.$store.commit("setIsAuthenticated");
