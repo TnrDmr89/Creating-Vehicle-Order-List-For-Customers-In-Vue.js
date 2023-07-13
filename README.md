@@ -3,7 +3,7 @@
 > A Vue.js project
 > İlk öncelikle, yapılan SignUp ve Login componentlerı ile kullanıcı girişi yapılmaktadır. Backend tetiklenerek token alıyoruz.
 > Sonrasında axios kullarak yapacağımız http requeslerinde(post,delete,get vb) headerlar içine bu tokenı koyarak işlem yapıyoruz.
-> Projede vuex,vue-router,axios,bosstrap kullanılmıştır.
+> Projede vuex,vue-router,axios,boostrap kullanılmıştır.
 > Başarılı ya da başarısız işlemlerde işlem durumunu gösterecek uyarı mesajları da atılmaktadır.(FailureProcess ve saveProcess componentları)
 
 ## Build Setup
