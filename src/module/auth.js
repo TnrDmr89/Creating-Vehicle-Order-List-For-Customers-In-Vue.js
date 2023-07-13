@@ -53,7 +53,7 @@ const actions = {
                 commit("setIsAuthenticated");
                 dispatch("getStoreFromDB");
                 dispatch("getPersonsFromDB");
-                router.push("/addPurchase");
+                router.push("/home");
             })
     }
 }

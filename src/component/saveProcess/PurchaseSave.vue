@@ -110,14 +110,21 @@
                 </option>
               </select>
             </div>
-            <button
-              class="btn mt-3 btn-primary"
-              style="margin-left:40%"
-              @click="savePerson"
-              :disabled="$v.$invalid"
-            >
-              Save
-            </button>
+            <div class="d-flex justify-content-evenly">
+              <button
+                class="btn mt-3 btn-primary"
+                @click="savePerson"
+                :disabled="$v.$invalid"
+              >
+                Save
+              </button>
+              <button
+                  class="btn mt-3 btn-warning"
+                  @click="quit"
+                >
+                  Quit
+                </button>
+            </div>
           </div>
         </div>
       </div>
@@ -129,7 +136,7 @@
   <script>
 import { mapGetters } from "vuex";
 import { required, numeric, alpha } from "vuelidate/lib/validators";
-import SaveSuccess from "./SaveSuccess.vue";
+import SaveSuccess from "../processResult/SaveSuccess.vue";
 export default {
   components: {
     appSaveSuccess: SaveSuccess,
@@ -189,6 +196,9 @@ export default {
         this.isSaved = false;
       }, 1000);
     },
+    quit(){
+      this.$router.replace("/home")
+    }
   },
   watch: {
     selectedStore: function (value) {

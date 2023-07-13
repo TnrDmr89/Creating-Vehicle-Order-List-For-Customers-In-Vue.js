@@ -21,6 +21,11 @@
             </tr>
         </tbody>
      </table>
+     <div class="d-flex justify-content-center">
+        <button class="btn btn-warning" @click="quit">
+            Quit
+        </button>
+     </div>
     </div>
 </template>
 
@@ -29,6 +34,11 @@ import { mapGetters } from 'vuex'
 export default{
     computed:{
         ...mapGetters(["getPersonsList"])
+    },
+    methods:{
+       quit(){
+      this.$router.replace("/home")
+    }
     }
 
 }

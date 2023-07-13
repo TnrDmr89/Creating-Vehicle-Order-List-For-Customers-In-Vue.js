@@ -1,22 +1,13 @@
 <template>
   <div>
     <transition name="fade" mode="out-in">
-      <app-header v-if="isAuthenticated"></app-header>
-    </transition>
-    <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
   </div>
 </template>
 
 <script>
-import Header from "./component/Header.vue";
-import Dealer from "./component/Dealer.vue";
 export default {
-  components: {
-    appHeader: Header,
-    appDealer: Dealer,
-  },
   computed: {
     isAuthenticated() {
       return this.$store.state.auth.isAuthenticated;

@@ -4,6 +4,7 @@
       <div class="d-flex justify-content-center align-content-center">
         <div class="card shadow p-3 mt-2" style="width: 500px">
           <div class="form">
+            <h2>Dealer Add</h2>
             <div class="mt-3">
               <label for="select">Store</label>
               <select
@@ -50,14 +51,21 @@
                 v-model="dealerPhone"
               />
             </div>
-            <button
-              class="btn mt-3 btn-primary"
-              style="margin-left:40%"
-              @click="save"
-              :disabled="$v.$invalid"
-            >
-              Save
-            </button>
+            <div class="d-flex justify-content-evenly">
+              <button
+                class="btn mt-3 btn-primary"
+                @click="save"
+                :disabled="$v.$invalid"
+              >
+                Save
+              </button>
+              <button
+                class="btn mt-3 btn-warning"
+                @click="quit"
+              >
+                Quit
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +77,7 @@
   <script>
 import { mapGetters } from "vuex";
 import { required } from "vuelidate/lib/validators";
-import SaveSuccess from './SaveSuccess.vue';
+import SaveSuccess from '../processResult/SaveSuccess.vue';
 export default {
   components:{
     appSaveSuccess: SaveSuccess
@@ -107,6 +115,9 @@ export default {
           this.isSaved = false
         },1000)
     },
+    quit(){
+      this.$router.replace("/home")
+    }
   },
   validations: {
     dealerName: { required,  },

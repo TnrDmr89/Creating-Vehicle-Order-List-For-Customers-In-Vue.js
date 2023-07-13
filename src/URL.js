@@ -6,5 +6,6 @@ export const URL ={
     STORE_GETALL_API_RESTCONTROLLER:"http://localhost:8082/store/allStore",
     PURCHASE_BRAND_ACCOUNT_RESTCONTROLLER:"http://localhost:8082/car/purchaseAccountWithBrand",
     DEALER_SAVE_RESTCONTROLLER:"http://localhost:8082/dealer/addDealer",
-    DEALERBYSTORE_GET_RESTCONTROLLER:"http://localhost:8082/dealer/getDealerByStore"
+    DEALERBYSTORE_GET_RESTCONTROLLER:"http://localhost:8082/dealer/getDealerByStore",
+    DELETEPURCHASE_RESTCONTROLLER:"http://localhost:8082/person/deletePerson"
 }
